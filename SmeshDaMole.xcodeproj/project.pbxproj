@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		9DA291701BD4D8BC00AED4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA2916F1BD4D8BC00AED4CE /* main.m */; };
 		9DA291731BD4D8BC00AED4CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291721BD4D8BC00AED4CE /* AppDelegate.m */; };
-		9DA291761BD4D8BC00AED4CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291751BD4D8BC00AED4CE /* ViewController.m */; };
+		9DA291761BD4D8BC00AED4CE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291751BD4D8BC00AED4CE /* GameViewController.m */; };
 		9DA291791BD4D8BC00AED4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA291771BD4D8BC00AED4CE /* Main.storyboard */; };
 		9DA2917B1BD4D8BC00AED4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA2917A1BD4D8BC00AED4CE /* Assets.xcassets */; };
 		9DA2917E1BD4D8BC00AED4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA2917C1BD4D8BC00AED4CE /* LaunchScreen.storyboard */; };
 		9DA291891BD4D8BC00AED4CE /* SmeshDaMoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291881BD4D8BC00AED4CE /* SmeshDaMoleTests.m */; };
 		9DA291941BD4D8BC00AED4CE /* SmeshDaMoleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291931BD4D8BC00AED4CE /* SmeshDaMoleUITests.m */; };
+		9DA291A51BD4E32000AED4CE /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DA291A41BD4E32000AED4CE /* Grass.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,8 @@
 		9DA2916F1BD4D8BC00AED4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DA291711BD4D8BC00AED4CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DA291721BD4D8BC00AED4CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9DA291741BD4D8BC00AED4CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9DA291751BD4D8BC00AED4CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9DA291741BD4D8BC00AED4CE /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		9DA291751BD4D8BC00AED4CE /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		9DA291781BD4D8BC00AED4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DA2917A1BD4D8BC00AED4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DA2917D1BD4D8BC00AED4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		9DA2918F1BD4D8BC00AED4CE /* SmeshDaMoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmeshDaMoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA291931BD4D8BC00AED4CE /* SmeshDaMoleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmeshDaMoleUITests.m; sourceTree = "<group>"; };
 		9DA291951BD4D8BC00AED4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA291A41BD4E32000AED4CE /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		9DA291621BD4D8BC00AED4CE = {
 			isa = PBXGroup;
 			children = (
+				9DA291A11BD4E02600AED4CE /* Sprites */,
 				9DA2916D1BD4D8BC00AED4CE /* SmeshDaMole */,
 				9DA291871BD4D8BC00AED4CE /* SmeshDaMoleTests */,
 				9DA291921BD4D8BC00AED4CE /* SmeshDaMoleUITests */,
@@ -103,8 +106,8 @@
 			children = (
 				9DA291711BD4D8BC00AED4CE /* AppDelegate.h */,
 				9DA291721BD4D8BC00AED4CE /* AppDelegate.m */,
-				9DA291741BD4D8BC00AED4CE /* ViewController.h */,
-				9DA291751BD4D8BC00AED4CE /* ViewController.m */,
+				9DA291741BD4D8BC00AED4CE /* GameViewController.h */,
+				9DA291751BD4D8BC00AED4CE /* GameViewController.m */,
 				9DA291771BD4D8BC00AED4CE /* Main.storyboard */,
 				9DA2917A1BD4D8BC00AED4CE /* Assets.xcassets */,
 				9DA2917C1BD4D8BC00AED4CE /* LaunchScreen.storyboard */,
@@ -138,6 +141,14 @@
 				9DA291951BD4D8BC00AED4CE /* Info.plist */,
 			);
 			path = SmeshDaMoleUITests;
+			sourceTree = "<group>";
+		};
+		9DA291A11BD4E02600AED4CE /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				9DA291A41BD4E32000AED4CE /* Grass.png */,
+			);
+			name = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA291A51BD4E32000AED4CE /* Grass.png in Resources */,
 				9DA2917E1BD4D8BC00AED4CE /* LaunchScreen.storyboard in Resources */,
 				9DA2917B1BD4D8BC00AED4CE /* Assets.xcassets in Resources */,
 				9DA291791BD4D8BC00AED4CE /* Main.storyboard in Resources */,
@@ -270,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA291761BD4D8BC00AED4CE /* ViewController.m in Sources */,
+				9DA291761BD4D8BC00AED4CE /* GameViewController.m in Sources */,
 				9DA291731BD4D8BC00AED4CE /* AppDelegate.m in Sources */,
 				9DA291701BD4D8BC00AED4CE /* main.m in Sources */,
 			);

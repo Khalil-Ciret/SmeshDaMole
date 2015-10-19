@@ -6,16 +6,20 @@
 //  Copyright © 2015 Kay-prod. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
 
-@interface ViewController ()
+@interface GameViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIImageView *backGroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"Grass.png"]];
+    [self.view addSubview:backGroundView];
+                                
     // Do any additional setup after loading the view, typically from a nib.
 }
 
