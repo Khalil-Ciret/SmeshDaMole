@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GameViewController : UIViewController
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *allMoles;
 
 
 @end

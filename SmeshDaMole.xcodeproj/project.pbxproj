@@ -16,6 +16,7 @@
 		9DA291891BD4D8BC00AED4CE /* SmeshDaMoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291881BD4D8BC00AED4CE /* SmeshDaMoleTests.m */; };
 		9DA291941BD4D8BC00AED4CE /* SmeshDaMoleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291931BD4D8BC00AED4CE /* SmeshDaMoleUITests.m */; };
 		9DA291A51BD4E32000AED4CE /* Grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DA291A41BD4E32000AED4CE /* Grass.png */; settings = {ASSET_TAGS = (); }; };
+		9DA291A71BD4EE6B00AED4CE /* Mole.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DA291A61BD4EE6B00AED4CE /* Mole.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9DA291931BD4D8BC00AED4CE /* SmeshDaMoleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmeshDaMoleUITests.m; sourceTree = "<group>"; };
 		9DA291951BD4D8BC00AED4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA291A41BD4E32000AED4CE /* Grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grass.png; sourceTree = "<group>"; };
+		9DA291A61BD4EE6B00AED4CE /* Mole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mole.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		9DA291A11BD4E02600AED4CE /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				9DA291A61BD4EE6B00AED4CE /* Mole.png */,
 				9DA291A41BD4E32000AED4CE /* Grass.png */,
 			);
 			name = Sprites;
@@ -256,6 +259,7 @@
 			files = (
 				9DA291A51BD4E32000AED4CE /* Grass.png in Resources */,
 				9DA2917E1BD4D8BC00AED4CE /* LaunchScreen.storyboard in Resources */,
+				9DA291A71BD4EE6B00AED4CE /* Mole.png in Resources */,
 				9DA2917B1BD4D8BC00AED4CE /* Assets.xcassets in Resources */,
 				9DA291791BD4D8BC00AED4CE /* Main.storyboard in Resources */,
 			);
