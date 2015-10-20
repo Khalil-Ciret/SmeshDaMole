@@ -72,6 +72,7 @@
     
     if(self.timeLeft==0)
     {
+        [self.audioPlayer stop];
         [self moleDisparition:self.lastTimerUsed];
         [self.lastTimerUsed invalidate];
         [killMePls invalidate];
@@ -101,6 +102,7 @@
         NSRunLoop *rollingAround = [NSRunLoop currentRunLoop];
         [rollingAround addTimer:timer forMode:NSDefaultRunLoopMode];
         self.labelStart.text = @"";
+        [self startMusic];
     }
     
     self.numberOfSecondsBeforeStart--;
@@ -110,6 +112,11 @@
 
     
     
+}
+
+-(void) startMusic {
+    self.audioPlayer= [[AVAudioPlayer alloc ] initWithContentsOfURL: [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@", [[NSBundle mainBundle] pathForResource:@"bestbgmEver" ofType:@".mp3"]]] error:nil];
+    [self.audioPlayer play];
 }
 
 - (void) touchesBegan:(NSSet<UITouch *> *)touches

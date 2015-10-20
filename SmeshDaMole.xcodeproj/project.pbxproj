@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9D82D28C1BD62E6800BD0093 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D82D28B1BD62E6800BD0093 /* Game.m */; settings = {ASSET_TAGS = (); }; };
+		9D82D2921BD691C700BD0093 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D82D2911BD691C700BD0093 /* AVFoundation.framework */; };
+		9D82D2941BD691D300BD0093 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D82D2931BD691D300BD0093 /* AudioToolbox.framework */; };
+		9D82D2981BD6987D00BD0093 /* bestbgmEver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D82D2971BD6987D00BD0093 /* bestbgmEver.mp3 */; settings = {ASSET_TAGS = (); }; };
 		9DA291701BD4D8BC00AED4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA2916F1BD4D8BC00AED4CE /* main.m */; };
 		9DA291731BD4D8BC00AED4CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291721BD4D8BC00AED4CE /* AppDelegate.m */; };
 		9DA291761BD4D8BC00AED4CE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA291751BD4D8BC00AED4CE /* GameViewController.m */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		9D82D28A1BD62E6800BD0093 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		9D82D28B1BD62E6800BD0093 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		9D82D2911BD691C700BD0093 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9D82D2931BD691D300BD0093 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9D82D2971BD6987D00BD0093 /* bestbgmEver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bestbgmEver.mp3; sourceTree = "<group>"; };
 		9DA2916B1BD4D8BC00AED4CE /* SmeshDaMole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmeshDaMole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA2916F1BD4D8BC00AED4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DA291711BD4D8BC00AED4CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D82D2941BD691D300BD0093 /* AudioToolbox.framework in Frameworks */,
+				9D82D2921BD691C700BD0093 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D82D28E1BD6911600BD0093 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9D82D2971BD6987D00BD0093 /* bestbgmEver.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		9DA291621BD4D8BC00AED4CE = {
 			isa = PBXGroup;
 			children = (
+				9D82D2931BD691D300BD0093 /* AudioToolbox.framework */,
+				9D82D2911BD691C700BD0093 /* AVFoundation.framework */,
+				9D82D28E1BD6911600BD0093 /* Sounds */,
 				9DA291A11BD4E02600AED4CE /* Sprites */,
 				9DA2916D1BD4D8BC00AED4CE /* SmeshDaMole */,
 				9DA291871BD4D8BC00AED4CE /* SmeshDaMoleTests */,
@@ -266,6 +285,7 @@
 				9DA2917E1BD4D8BC00AED4CE /* LaunchScreen.storyboard in Resources */,
 				9DA291A71BD4EE6B00AED4CE /* Mole.png in Resources */,
 				9DA2917B1BD4D8BC00AED4CE /* Assets.xcassets in Resources */,
+				9D82D2981BD6987D00BD0093 /* bestbgmEver.mp3 in Resources */,
 				9DA291791BD4D8BC00AED4CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

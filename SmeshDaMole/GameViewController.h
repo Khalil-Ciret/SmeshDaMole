@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolBox/AudioToolBox.h>
 #import "Game.h"
-
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <AVAudioPlayerDelegate>
+@property (strong, nonatomic) AVAudioPlayer * audioPlayer;
 @property (weak, nonatomic) IBOutlet UILabel *labelStart;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *allMoles;
 @property (strong, nonatomic) Game* gameModel;
