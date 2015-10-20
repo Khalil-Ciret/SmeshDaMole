@@ -16,6 +16,12 @@
 
 @implementation GameViewController
 
+//Lazy instantation
+- (Game*) gameModel {
+    if (!_gameModel) _gameModel = [[Game alloc] init];
+    return _gameModel;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -58,17 +64,27 @@
     
 }
 
-- (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void) touchesBegan:(NSSet<UITouch *> *)touches
+withEvent:(UIEvent *)event {
+    
     UITouch *touch =  [[event allTouches] anyObject];
     CGPoint locationTouch = [touch locationInView:self.view];
-    NSLog(@"%f %f, %f LOL", locationTouch.x, locationTouch.y, ((UIImageView*) [self.allMoles firstObject]).frame.origin.x ) ;
+    int scoreInit = self.gameModel.score;
+    
     for (UIImageView *mole in self.moleAtTheScreen) {
-        if (CGRectContainsPoint(mole.frame, locationTouch)) {
+        if (CGRectContainsPoint(mole.frame, locationTouch))
+        {
             [self moleTouched:mole];
-            
+            [self.gameModel refreshScore:true];
         }
-            
     }
+    
+    //This conditions allows us to see if the score hasn't changed, implying no mole has been SMESHED
+    if( scoreInit==self.gameModel.score)
+    {
+        [self.gameModel refreshScore:false];
+    }
+    self.labelScore.text = [NSString stringWithFormat:@"Score = %d", self.gameModel.score];
 
 }
 
