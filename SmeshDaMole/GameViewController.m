@@ -12,6 +12,8 @@
 
 @property(strong, nonatomic) NSMutableArray* moleAtTheScreen; //Of UI IMAGE VIEW
 @property(nonatomic) int numberOfSecondsBeforeStart;
+@property(nonatomic) int timeLeft;
+@property (strong, nonatomic) NSTimer* lastTimerUsed;
 @end
 
 @implementation GameViewController
@@ -35,6 +37,7 @@
         img.alpha = 0.0f;
     }
     [self timerStart];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -51,6 +54,7 @@
     NSTimer * nextApp= [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(newMoleApparition) userInfo:nil repeats:NO ];
     NSDictionary *mole = [[NSDictionary alloc] initWithObjects:@[newMole] forKeys:@[@"mole"]];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(moleDisparition:) userInfo:mole repeats:NO ];
+    self.lastTimerUsed = nextApp;
     NSRunLoop *rollingAround = [NSRunLoop currentRunLoop];
     [rollingAround addTimer:timer forMode:NSDefaultRunLoopMode];
     [rollingAround addTimer:nextApp forMode:NSDefaultRunLoopMode];
@@ -59,6 +63,22 @@
     
     
 }
+
+- (void) endOfGame: (NSTimer*) killMePls
+{
+    
+    self.timeLeft--;
+    self.timeLabel.text = [NSString stringWithFormat:@"%d", self.timeLeft ];
+    
+    if(self.timeLeft==0)
+    {
+        [self moleDisparition:self.lastTimerUsed];
+        [self.lastTimerUsed invalidate];
+        [killMePls invalidate];
+    }
+    
+    }
+
 
 - (void) timerStart;
 {
@@ -76,6 +96,10 @@
     else
     {
         [self newMoleApparition];
+        self.timeLeft = 30;
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(endOfGame:) userInfo:nil repeats:YES ];
+        NSRunLoop *rollingAround = [NSRunLoop currentRunLoop];
+        [rollingAround addTimer:timer forMode:NSDefaultRunLoopMode];
         self.labelStart.text = @"";
     }
     
