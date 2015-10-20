@@ -133,6 +133,15 @@
                                     <rect key="frame" x="163" y="47" width="75" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyI-fB-ZTU">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="47"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="358" width="190" height="84"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -156,6 +165,7 @@
                                 <exclude reference="R38-cc-epV"/>
                                 <exclude reference="Pho-BU-uwp"/>
                                 <exclude reference="zZI-5j-iYQ"/>
+                                <exclude reference="gyI-fB-ZTU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -179,11 +189,13 @@
                                 <include reference="R38-cc-epV"/>
                                 <include reference="Pho-BU-uwp"/>
                                 <include reference="zZI-5j-iYQ"/>
+                                <include reference="gyI-fB-ZTU"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="labelScore" destination="zZI-5j-iYQ" id="dd6-Wi-hSQ"/>
+                        <outlet property="labelStart" destination="gyI-fB-ZTU" id="j44-lg-aJE"/>
                         <outletCollection property="allMoles" destination="lTb-sX-P70" id="XFf-ad-jUX"/>
                         <outletCollection property="allMoles" destination="Dfx-J9-7W0" id="pZN-8U-a8K"/>
                         <outletCollection property="allMoles" destination="vcn-fF-fwh" id="X3R-Rc-R6c"/>

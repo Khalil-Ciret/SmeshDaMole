@@ -10,6 +10,7 @@
 #import "Game.h"
 
 @interface GameViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *labelStart;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *allMoles;
 @property (strong, nonatomic) Game* gameModel;
 @property (weak, nonatomic) IBOutlet UILabel *labelScore;

@@ -11,7 +11,7 @@
 @interface GameViewController ()
 
 @property(strong, nonatomic) NSMutableArray* moleAtTheScreen; //Of UI IMAGE VIEW
-
+@property(nonatomic) int numberOfSecondsBeforeStart;
 @end
 
 @implementation GameViewController
@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.numberOfSecondsBeforeStart = 4;
     self.moleAtTheScreen = [[NSMutableArray alloc] init];
     UIImageView *backGroundView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"Grass.png"]];
     [self.view addSubview:backGroundView];
@@ -33,13 +34,8 @@
             img.image = [UIImage imageNamed:@"Mole.png"];
         img.alpha = 0.0f;
     }
-    
-   // Ca sera utile pour faire le 3, 2, 1... Ya know? NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(newMoleApparition) userInfo:nil repeats:NO ];
-   // NSRunLoop *rollingAround = [NSRunLoop currentRunLoop];
-    //[rollingAround addTimer:timer forMode:NSDefaultRunLoopMode];
+    [self timerStart];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [self newMoleApparition];
 }
 
 
@@ -60,6 +56,34 @@
     [rollingAround addTimer:nextApp forMode:NSDefaultRunLoopMode];
     
     newMole.alpha = 1.0f;
+    
+    
+}
+
+- (void) timerStart;
+{
+    if (self.numberOfSecondsBeforeStart>0)
+    {
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerStart) userInfo:nil repeats:NO ];
+        NSRunLoop *bestLoopEver = [NSRunLoop currentRunLoop];
+        [bestLoopEver addTimer:timer forMode:NSDefaultRunLoopMode];
+        NSLog(@"%d ...", self.numberOfSecondsBeforeStart);
+        if (self.numberOfSecondsBeforeStart !=1)
+        self.labelStart.text=[NSString stringWithFormat:@"%d", self.numberOfSecondsBeforeStart-1];
+        else
+            self.labelStart.text=@"SMESH DA MOLES!";
+    }
+    else
+    {
+        [self newMoleApparition];
+        self.labelStart.text = @"";
+    }
+    
+    self.numberOfSecondsBeforeStart--;
+
+    
+    
+
     
     
 }
